@@ -28,7 +28,7 @@ head = {"value":11,
 class Node:
     def __init__(self,value):
         self.value = value
-        self.node = None
+        self.next = None
 
 # Now here I have created one linkedlist constructor
 class LinkedList:
@@ -37,8 +37,15 @@ class LinkedList:
         self.head = new_node
         self.head = new_node
 
+    def print_list(self):       # Added one print_list to print all value in LL
+        temp = self.head
+        while temp is not None:
+            print(temp.value)
+            temp = temp.next
+
 my_linkedlist = LinkedList(4)
 print(my_linkedlist.head.value)
+
 
 
 
