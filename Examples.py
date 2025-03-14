@@ -1,4 +1,4 @@
-'''def paperwork(n, m):
+"""def paperwork(n, m):
     if n<0 or m<0:
         return 0
     else:
@@ -31,10 +31,9 @@ def square_sum(numbers):
 
 
 print(square_sum((1, 2, 2,4)))
-'''
-from email.headerregistry import Address
+"""
 
-
+"""
 def count_alphabets(string):
     SeenWords = []
     for char in string:
@@ -48,7 +47,11 @@ def count_alphabets(string):
 
 User1 = {"University": "Clark",  "Address" : "950 main Street"}
 User2 = User1
-User2["University"] = "Northeastern"
+User2["University"] = "Northeastern"""
+
+
+
+
 
 
 
