@@ -35,7 +35,8 @@ class LinkedList:
     def __init__(self,value):
         new_node = Node(value)
         self.head = new_node
-        self.head = new_node
+        self.tail = new_node
+        self.length = 1
 
     def print_list(self):       # Added one print_list to print all value in LL
         temp = self.head
@@ -43,8 +44,20 @@ class LinkedList:
             print(temp.value)
             temp = temp.next
 
-my_linkedlist = LinkedList(4)
-print(my_linkedlist.head.value)
+    def append (self,value):
+        new_node = Node(value)
+     # Let's Write one edge case What if No Nodes are available Head and tail will be the same node
+        if self.head is None:
+         self.head = new_node
+         self.tail = new_node
+        else: # Here Our Main Append Logic
+            self.tail.next = new_node
+            self.tail = new_node
+            self.length =+ 1
+        return True # Optional, But Later We will write another method that will call append method
+
+
+
 
 
 
