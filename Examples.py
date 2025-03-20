@@ -49,6 +49,36 @@ User1 = {"University": "Clark",  "Address" : "950 main Street"}
 User2 = User1
 User2["University"] = "Northeastern"""
 
+a =[2,4,9,7,4]
+n = 5
+max = 0
+min = 1
+for i in range (n):
+    if a [i]>max:
+        max = a[i]  #9
+for i in range (n):
+    if a[i]<min:
+        min = a[i]  #2
+# print(max)
+# print(min)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

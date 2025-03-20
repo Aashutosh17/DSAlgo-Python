@@ -44,6 +44,8 @@ class LinkedList:
             print(temp.value)
             temp = temp.next
 
+
+    # Append
     def append (self,value):
         new_node = Node(value)
      # Let's Write one edge case What if No Nodes are available Head and tail will be the same node
@@ -53,9 +55,37 @@ class LinkedList:
         else: # Here Our Main Append Logic
             self.tail.next = new_node
             self.tail = new_node
-            self.length =+ 1
+        self.length += 1
         return True # Optional, But Later We will write another method that will call append method
 
+    def pop (self):
+        if self.length == 0: # Edge Case If there is no node.
+            return None
+
+        temp = self.head
+        pre = self.head
+
+        while temp.next:
+            pre = temp
+            temp = temp.next
+
+        self.tail = pre
+        self.tail.next = None
+        self.length -= 1
+        if self.length == 0:
+            self.head = None
+            self.tail = None
+        return temp.value
+
+
+
+linked_list = LinkedList(1)
+linked_list.append(2)
+# linked_list.print_list()
+
+print(linked_list.pop())
+print(linked_list.pop())
+print(linked_list.pop())
 
 
 
