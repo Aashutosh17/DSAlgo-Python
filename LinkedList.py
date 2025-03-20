@@ -77,15 +77,33 @@ class LinkedList:
             self.tail = None
         return temp.value
 
+    # Prepend
+    def prepend (self,value):
+        new_node = Node(value)
+        # Edge Case What if there is no node
+        if self.length == 0:
+            self.head = new_node
+            self.tail = new_node
+
+        else: # Main Logic
+            new_node.next = self.head
+            self.head = new_node # Now our new node is self.head Hence it is prepended
+
+        self.length += 1
+        return True # Because We're going to use this further
+
+
+
 
 
 linked_list = LinkedList(1)
 linked_list.append(2)
-# linked_list.print_list()
+linked_list.prepend(11)
+linked_list.print_list()
 
-print(linked_list.pop())
-print(linked_list.pop())
-print(linked_list.pop())
+# print(linked_list.pop())
+# print(linked_list.pop())
+# print(linked_list.pop())
 
 
 
