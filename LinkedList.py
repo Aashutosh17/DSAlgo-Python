@@ -92,6 +92,10 @@ class LinkedList:
         self.length += 1
         return True # Because We're going to use this further
 
+    def pop_first (self):
+        pass
+
+
 
 
 
