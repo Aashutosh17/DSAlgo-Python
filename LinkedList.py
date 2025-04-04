@@ -1,24 +1,22 @@
 # Linked List
 # Node is not just the value, but it is also the pointer that shows us what is next?
-
-head = {"value":11,
-        "next" : { "value":3,
-                   "next": {
-                        "value":23,
-                         "next":{
-                             "value":7,
-                             "next":{
-                             "value": 4,
-                            "next": None
-                             }
-
-
-                         }
-
-                   }
-
+head = {
+    "value": 11,
+    "next": {
+        "value": 3,
+        "next": {
+            "value": 23,
+            "next": {
+                "value": 7,
+                "next": {
+                    "value": 4,
+                    "next": None
+                }
+            }
         }
-        }
+    }
+}
+
 
 # print(head['next']['next']['value'])  --> Output:23
 
@@ -93,21 +91,28 @@ class LinkedList:
         return True # Because We're going to use this further
 
     def pop_first (self):
-        pass
+        if self.length == 0:
+            return None
+
+        temp = self.head
+        self.head = self.head.next
+        temp.next = None
+        self.length-= 1
+        if self.length == 0:
+            self.tail = None
+        return temp
 
 
 
+linked_list = LinkedList(11)
+linked_list.append(3)
+linked_list.append(4)
+print(linked_list.pop_first())
 
 
-
-linked_list = LinkedList(1)
-linked_list.append(2)
-linked_list.prepend(11)
 linked_list.print_list()
 
-# print(linked_list.pop())
-# print(linked_list.pop())
-# print(linked_list.pop())
+
 
 
 
