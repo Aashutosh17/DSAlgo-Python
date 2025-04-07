@@ -150,13 +150,14 @@ class LinkedList:
 
     def reverse(self):
         temp = self.head
-        self.head = self. tail
+        self.head = self.tail
         self.tail = temp
         after = temp.next
         before = None
+
         for _ in range (self.length):
             after = temp.next
-            temp.next = before  # flips the point to previous node
+            temp.next = before # Flips the pointer towards the previous Nodes
             before = temp
             temp = after
 
@@ -170,10 +171,10 @@ my_linked_list.append(7)
 
 my_linked_list.print_list()
 
-# print("Get:", my_linked_list.get(2))
-# print("Set:", my_linked_list.set_value(2,11))
-# print("Insert:", my_linked_list.set_value(2,21))
-# print("Remove:", my_linked_list.remove(1))
+print("Get:", my_linked_list.get(2))
+print("Set:", my_linked_list.set_value(2,11))
+print("Insert:", my_linked_list.set_value(2,21))
+print("Remove:", my_linked_list.remove(1))
 print("Reversed:", my_linked_list.reverse())
 my_linked_list.print_list()
 
