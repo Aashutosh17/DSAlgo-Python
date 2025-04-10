@@ -6,4 +6,11 @@ class Solution:
                 ans.append(n)
         return ans
 
-# Guys very Optimal solution is just a return nums + nums
+
+
+
+
+
+
+
+
