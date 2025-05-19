@@ -54,7 +54,7 @@ class LinkedList:
             self.tail.next = new_node
             self.tail = new_node
         self.length += 1
-        return True # Optional, But Later We will write another method that will call append method
+        return True #Optional, But Later We will write another method that will call append method
 
     def pop (self):
         if self.length == 0: # Edge Case If there is no node.

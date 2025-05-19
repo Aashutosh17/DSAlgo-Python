@@ -1,8 +1,5 @@
-from typing import List
-
-
 class Solution:
-    def findClosestNumber(self, nums: List[int]) -> int:
+    def findClosestNumber(self, nums: list[int]) -> int:
         closets = nums[0]
 
         for x in nums:
