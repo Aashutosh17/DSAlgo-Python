@@ -1,3 +1,6 @@
+from asyncio import new_event_loop
+
+
 class Node:
     def __init__(self,value):
         self.value = value
@@ -16,5 +19,28 @@ class Queue:
             print(temp.value)
             temp = temp.next
 
+
+    def enqueue(self,value):
+        new_node = Node(value)
+        # Just the edge case
+        if self.first is None:
+            self.first = new_node
+            self.last = new_node
+        else:
+            # Last Node --> new_node
+            self.last.next = new_node
+            # Updating the tail pointer
+            self.last = new_node
+        self.length +=1
+
+
+
+
+
+
 my_queue = Queue(45)
+
+my_queue.enqueue(65)
+my_queue.enqueue(20)
+
 my_queue.print_queue()
