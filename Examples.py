@@ -11,7 +11,7 @@ def past(h, m, s):
     h = h * 60 * 60 * 1000
     m = m * 60 * 1000
     s = s * 1000
-    return  h + m + s
+    return h + m + s
 
 total = past(0,1,1)
 print(total)
@@ -19,7 +19,7 @@ print(total)
 def solution(string1, String2):
     print(string1, String2[::-1])
 
-solution("Word" , "World")
+solution("Word", "World")
 
 
 

@@ -1,6 +1,3 @@
-from asyncio import new_event_loop
-
-
 class Node:
     def __init__(self,value):
         self.value = value
@@ -33,14 +30,27 @@ class Queue:
             self.last = new_node
         self.length +=1
 
+    def dequeue(self):
+        if self.length == 0:
+            return None
+        temp = self.first
+        if self.length == 1:
+            self.first = None
+            self.last = None
+        else:
+            self.first = self.first.next
+            temp.next = None
+        self.length -= 1
+        return temp
 
 
+my_queue = Queue(1)
 
+my_queue.enqueue(2)
+my_queue.enqueue(3)
 
+# (2) Items  - return s
+print(my_queue.dequeue())
 
-my_queue = Queue(45)
-
-my_queue.enqueue(65)
-my_queue.enqueue(20)
 
 my_queue.print_queue()

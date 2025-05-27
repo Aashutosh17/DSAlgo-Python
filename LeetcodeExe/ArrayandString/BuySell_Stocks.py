@@ -4,7 +4,7 @@ def Solution (self):
     min_price = price[0]
 
     if len(price) == 0:
-        return 0
+        return 0 
 
     for i in range(len(price)):
 
