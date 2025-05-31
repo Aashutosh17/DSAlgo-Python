@@ -10,5 +10,3 @@ class Solution:
                     return [index1, index2]
         return None
 
-result = Solution()
-Solution.twoSum([2,3,4,5], 5)
