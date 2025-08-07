@@ -40,8 +40,8 @@ class Hashtable:
 
 my_hash_table = Hashtable()
 
-my_hash_table.set_item('bolts', 100)
-my_hash_table.set_item('nails', 200)
-my_hash_table.set_item('paints', 300)
+# my_hash_table.set_item('bolts', 100)
+# my_hash_table.set_item('nails', 200)
+# my_hash_table.set_item('paints', 300)
 
-print(my_hash_table.keys())
+# print(my_hash_table.keys())
