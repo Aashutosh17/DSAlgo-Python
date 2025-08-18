@@ -18,7 +18,7 @@ def items_in_common(list1, list2):
 # Hashtable (Recommended approach)
 def items_in_common(list1, list2):
     my_dict = {}
-    for i in list1:
+    for i in list1:  # O(n)
         my_dict[i] = True
 
     for j in list2:
