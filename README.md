@@ -1,4 +1,4 @@
-# Data Structures and Algorithms - Scott Barrett (Udemy)
+# Data Structures and Algorithms 
 
 This repository contains the code and notes I've learned while going through the DSA course by Scott Barrett on Udemy.
 
