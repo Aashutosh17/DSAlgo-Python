@@ -66,6 +66,7 @@ my_tree = BinarySearchTree ()
 my_tree.insert(2)
 my_tree.insert(1)
 my_tree.insert(3)
+my_tree.insert(4)
 
 
 print(my_tree.root.value)
